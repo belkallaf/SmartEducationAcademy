@@ -1,0 +1,60 @@
+#hero .intro-info h2 {
+    color: #413e66;
+    margin-bottom: 5px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+#hero .btn-get-started {
+    font-size: 15px;
+    padding: 16px 40px;
+}
+
+#team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.invest-header {
+    font-size: 2.5 rem;
+    display: inline-block;
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    font-size: 2.125rem;
+    margin-top: 20px;
+}
+
+.invest-under-header {
+    font-size: inherit;
+    display: inline-block;
+    margin: 0;
+    max-width: 80%;
+    margin-bottom: 30px;
+}
+
+.call-to-action-btn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1bb1dc;
+    color: #fff;
+    font-size: 15px;
+    padding: 16px 40px;
+}

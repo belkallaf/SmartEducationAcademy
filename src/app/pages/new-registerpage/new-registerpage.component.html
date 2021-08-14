@@ -1,0 +1,189 @@
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <ol>
+                <li><a href="/home">Home</a></li>
+                <li>Register Now</li>
+            </ol>
+            <h2>Register Now</h2>
+
+        </div>
+    </section>
+    <!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+
+
+        <section id="services" class="services section-bg">
+            <div class="container aos-init aos-animate" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h3>Registration Form</h3>
+                    <p>Fill out the form carefully for registration.</p>
+                </header>
+                <div class="card" *ngIf="!donSubmit">
+                    <div class="card-body">
+
+                        <form class="form" action="#" [formGroup]="registerForm">
+
+                            <ng-container *ngIf="!donSubmit">
+
+
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label>Child Name <span class="text-danger">*</span></label>
+                                        <input type="text" formControlName="childName" class="form-control form-control-sm" placeholder="" [class.is-invalid]="isControlInvalid('childName')" [class.is-valid]="isControlValid('childName')" />
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'childName')">
+                                            This field is required
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label>Father Name <span class="text-danger">*</span></label>
+                                        <input type="text" formControlName="fatherName" class="form-control form-control-sm" placeholder="" [class.is-invalid]="isControlInvalid('fatherName')" [class.is-valid]="isControlValid('fatherName')" />
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'fatherName')">
+                                            This field is required
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label>Age <span class="text-danger">*</span></label>
+                                        <input type="number" formControlName="age" class="form-control form-control-sm" placeholder="" [class.is-invalid]="isControlInvalid('age')" [class.is-valid]="isControlValid('age')" />
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'age')">
+                                            This field is required
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col">
+                                        <label>Gender <span class="text-danger">*</span></label>
+                                        <select class="form-control form-control-sm" formControlName="gender">
+                                            <option value="null" class="text-muted">Select item</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Femaile">Female</option>
+                                        </select>
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'gender')">
+                                            This field is required
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
+                                        <input type="text" formControlName="mobile" class="form-control form-control-sm" placeholder="" [class.is-invalid]="isControlInvalid('mobile')" [class.is-valid]="isControlValid('mobile')" />
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'mobile')">
+                                            This field is required
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label">WhatsApp Number <span class="text-danger">*</span></label>
+                                        <input type="text" formControlName="wahtsapp" class="form-control form-control-sm" placeholder="" [class.is-invalid]="isControlInvalid('wahtsapp')" [class.is-valid]="isControlValid('wahtsapp')" />
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'wahtsapp')">
+                                            This field is required
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label>Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control form-control-sm" placeholder="" autocomplete="off" [class.is-invalid]="isControlInvalid('email')" [class.is-valid]="isControlValid('email')" formControlName="email" />
+                                        <div class="invalid-feedback" *ngIf="controlHasError('email', 'email')">Valid email is required</div>
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'email')">This field is required</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label>Country <span class="text-danger">*</span></label>
+                                        <ng-select2 formControlName="country" placeholder="Select item" appendTo="body" multiple="false" searchable="true" clearable="true" width="100%" [class.is-invalid]="isControlInvalid('country')">
+                                            <option value="">
+                                                Select item
+                                            </option>
+                                            <option *ngFor="let item of standardCountries" [value]="item.value">
+                                                {{item.text}}
+                                            </option>
+                                        </ng-select2>
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'country')">This field is required</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control form-control-sm" placeholder="" formControlName="address" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label>Course <span class="text-danger">*</span></label>
+                                        <ng-select2 formControlName="course" placeholder="Select item" appendTo="body" multiple="false" searchable="true" clearable="true" width="100%" [class.is-invalid]="isControlInvalid('course')">
+                                            <option value="">
+                                                Select item
+                                            </option>
+
+                                            <option value="Scratch Coding">
+                                                Scratch Coding
+                                            </option>
+
+                                            <option value="App Development">
+                                                App Development
+                                            </option>
+
+                                            <option value="Scratch Coding">
+                                                Web Development
+                                            </option>
+                                            <option value="Python Classes">
+                                                Python Classes
+                                            </option>
+
+                                        </ng-select2>
+                                        <div class="invalid-feedback" *ngIf="controlHasError('required', 'course')">This field is required</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col">
+                                        <label>Additional Comments</label>
+                                        <textarea class="form-control" rows="4" placeholder="" formControlName="additionalComments"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer flex-center pt-2 justify-content-center align-items-center">
+                                    <button type="reset" id="kt_modal_create_api_key_cancel" class="btn btn-light me-3">Reset</button>
+                                    <button type="submit" id="kt_modal_create_api_key_submit" class="btn btn-primary" *ngIf="!isStartSaveData" (click)="onSubmit()">
+                                    <span class="indicator-label">Submit</span>
+                                </button>
+
+                                    <button type="button" class="btn btn-primary" [attr.disabled]="true" *ngIf="isStartSaveData">
+                                    <span class="indicator-progress">Please Wait...
+                                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                        </span>
+                                </button>
+                                </div>
+                            </ng-container>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="alert alert-success" role="alert" *ngIf="donSubmit">
+                    <h4 class="alert-heading">Well done!</h4>
+                    <p>Your form is submitted successfully, We will contact you as soon as possible.</p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+</main>
+<!-- End #main -->

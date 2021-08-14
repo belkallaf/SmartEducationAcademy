@@ -1,0 +1,13 @@
+{
+    // "typescript.tsdk": "node_modules/typescript/lib",
+    // "enable_typescript_language_service": false,
+    
+    "launch": {
+        
+
+        "configurations": [],
+        "compounds": []
+    },
+    "angular.enable-strict-mode-prompt": false,
+
+}
