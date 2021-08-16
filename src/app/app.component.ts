@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void{
 
     this.loadJsFile('assets/vendor/owl.carousel/owl.carousel.min.js');
-    this.loadJsFile('assets/vendor/counterup/counterup.min.js');
+    // this.loadJsFile('assets/vendor/counterup/counterup.min.js');
     this.loadJsFile('assets/js/main.js');
   }
   // // tslint:disable-next-line:typedef
