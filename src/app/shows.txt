@@ -31,3 +31,8 @@ import * as $ from 'jquery';
 
               Deployment ID              AKfycbxz1N5aJNeJSZVBYwyHtbY8PAL8LJDKP-GItcZi9TS_mHUMi7v5szFVhaOT9VZ1ZE7H
               Web app URL   https://script.google.com/macros/s/AKfycbxz1N5aJNeJSZVBYwyHtbY8PAL8LJDKP-GItcZi9TS_mHUMi7v5szFVhaOT9VZ1ZE7H/exec
+
+
+              ng build --prod --base-href "https://belkallaf.github.io/SmartEducationAcademy/"
+
+              ngh --dir=dist/smartAcademyApp
